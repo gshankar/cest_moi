@@ -4,10 +4,6 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Ganesh Shankar</title>
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta name="robots" content="all" />
-    <meta name="MSSmartTagsPreventParsing" content="true" />
-    <meta http-equiv="imagetoolbar" content="false" />	
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Open+Sans' rel='stylesheet' type='text/css'>
     <link href='stylesheets/page.css' rel='stylesheet' type='text/css'>
   </head>
@@ -48,31 +44,6 @@
     <script type="text/javascript" src="javascripts/jquery-1.6.2.min.js"></script>
     <script type="text/javascript" src="javascripts/jquery.backgrounder.js"></script>
     <script type="text/javascript" src="javascripts/jquery.scrollTo-min.js"></script>
-    <script type="text/javascript">
-      function resizePages() {
-        var h = $(window).height();
-        var height  =  h < 600 ? 600 : h;
-        $('.page').css('height',height);
-        $('#about').css('height',height);
-      }
-
-//resize
-$(window).resize(function(e) {
-    resizePages();
-    });
-resizePages();
-$('#my_background').backgrounder({element : '#page1'});
-
-//keyboard nav
-$(document).bind('keydown',function(e) {
-    switch(e.keyCode) {
-    case 32: //space
-    e.preventDefault();
-    $.scrollTo('#page2');
-    }
-    });
-
-  </script>
-
+    <script type="text/javascript"  src="javascripts/script.js"></script>
 </body>	
 </html>
