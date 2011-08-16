@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Ganesh Shankar</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="robots" content="all" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta http-equiv="imagetoolbar" content="false" />	
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='stylesheets/page.css' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <div class="page" id="page1"> 
+      <div id="contact">
+        <a class='contact' href='http://www.facebook.com/ganeshshankar'><img src='images/facebook.png'/></a>
+        <a class='contact' href='http://twitter.com/#!/ganesh_shankar'><img src='images/twitter.png'/></a>
+        <a class='contact' href='http://au.linkedin.com/in/ganeshshankar'><img src='images/linkedin.png'/></a>
+        <a class='contact' href='mailto:ganesh@ganeshshankar.com'><img src='images/mail.png'/></a>
+      </div>
+      <div id="about">
+        <h1>I'm Ganesh...</h1>
+        <p>
+        an engineer and entrepreneur who's not afraid to get dirty, living in Sydney, Australia.
+        </p>
+        <p>
+        I escaped the University of New South Wales with a Bachelor of Electrical Engineering and Master of Biomedical Engineering. After working in the high-tech medical industry for a few years, I heard the siren call of web development and now work making cool educational software at <a href='http://yourtutor.com.au' target='_blank'>Tutoring Australasia</a>. 
+        <p>
+        I also run a company, <a href='http://rocket26.com' target='_blank'>Rocket Twenty Six</a>, with three of my friends and we have Big Plans.
+        </p>
+        <p>
+        When not trying to build the next Greatest Thing, you can find me running long distances (slowly), learning French (mais pas trés bien), writing fiction and on <a href='http://trotsky.us' target='_blank'>Trotsky.us</a>, and training my attack cat, Comrade.
+        </p>
+      </div>
+    </div>
+
+    <div class="page" id="page2"> 
+      <p>More stuff</p>
+    </div>  
+
+    <div id="my_background" style="display:none;"><img src="images/gs_bg.jpg" alt="Ganesh" /></div>
+
+
+
+    <!--include jquery & backstretch-->
+    <script type="text/javascript" src="javascripts/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.backgrounder.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.scrollTo-min.js"></script>
+    <script type="text/javascript">
+      function resizePages() {
+        var h = $(window).height();
+        var height  =  h < 600 ? 600 : h;
+        $('.page').css('height',height);
+        $('#about').css('height',height);
+      }
+
+//resize
+$(window).resize(function(e) {
+    resizePages();
+    });
+resizePages();
+$('#my_background').backgrounder({element : '#page1'});
+
+//keyboard nav
+$(document).bind('keydown',function(e) {
+    switch(e.keyCode) {
+    case 32: //space
+    e.preventDefault();
+    $.scrollTo('#page2');
+    }
+    });
+
+  </script>
+
+</body>	
+</html>
