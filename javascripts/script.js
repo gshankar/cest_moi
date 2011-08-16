@@ -14,7 +14,8 @@ $('#my_background').backgrounder({element : '#page1'});
 
 //keyboard nav
 $(document).bind('keydown',function(e) {
-  if(e.keyCode) {
+  var code = (e.keyCode ? e.keyCode : e.which);
+  if(code == 32) {
     e.preventDefault();
     $.scrollTo('#page2');
   }

@@ -13,10 +13,20 @@ p {
   -webkit-font-smoothing: antialiased; 
 }
 		
-h1 { color: #fff; 
+h1 { 
+  color: #fff; 
   font-family: 'Open Sans', sans-serif; 
   font-size: 32px; padding-top:35px; 
   -webkit-font-smoothing: antialiased; 
+}
+
+#page1 h1 {
+  color: #fff; 
+}
+
+#page2 h1 {
+  color: #000; 
+  text-align: center;
 }
 
 a { color: #fff; 
